@@ -207,7 +207,7 @@ void record_manager::modifybydate(int y, int m, int d)
 	sort_records();
 	vector<record*> recordsToModify;
 
-	// ²éÕÒÆ¥ÅäµÄ¼ÇÂ¼
+	// æŸ¥æ‰¾åŒ¹é…çš„è®°å½•
 	for (int i = 0; i < getsize(); i++) {
 		if (records[i]->getdate().getyear() == y &&
 			records[i]->getdate().getmonth() == m &&
@@ -221,7 +221,7 @@ void record_manager::modifybydate(int y, int m, int d)
 		return;
 	}
 
-	// ÏÔÊ¾ÕÒµ½µÄ¼ÇÂ¼
+	// æ˜¾ç¤ºæ‰¾åˆ°çš„è®°å½•
 	cout << "Found " << recordsToModify.size() << " records for date " << y << "/" << m << "/" << d << ":" << endl;
 	cout << setw(12) << "type"
 		<< setw(13) << "money"
@@ -235,7 +235,7 @@ void record_manager::modifybydate(int y, int m, int d)
 		recordsToModify[i]->showrecord();
 	}
 
-	// Ñ¡ÔñÒªĞŞ¸ÄµÄ¼ÇÂ¼
+	// é€‰æ‹©è¦ä¿®æ”¹çš„è®°å½•
 	cout << "Select record number to modify (0 to cancel): ";
 	int choice = getInput<int>(0, recordsToModify.size());
 
@@ -246,22 +246,30 @@ void record_manager::modifybydate(int y, int m, int d)
 
 	record* selectedRecord = recordsToModify[choice - 1];
 
-	// ĞŞ¸Ä¼ÇÂ¼ĞÅÏ¢
+	// ä¿®æ”¹è®°å½•ä¿¡æ¯
 	cout << "\n=== Modify Record ===" << endl;
 
-	// ĞŞ¸Ä½ğ¶î
+	// ä¿®æ”¹é‡‘é¢
 	cout << "Current money: " << selectedRecord->getmoney() << endl;
 	cout << "Modify money? (1=Yes, 0=No): ";
 	int modifyMoney = getInput<int>(0, 1);
 	if (modifyMoney == 1) {
 		cout << "Enter new money: ";
+<<<<<<< HEAD
 		double newMoney = getInput<double>(0.01, 99999999.99);
+=======
+		float newMoney = getInput<double>(0.01, 99999999.99);
+>>>>>>> 727b0bf041fc595c586b848ee91a682e752205d0
 		selectedRecord->setmoney(newMoney);
 		cout << "Money updated successfully." << endl;
 	}
 
+<<<<<<< HEAD
 
 	// ĞŞ¸ÄÈÕÆÚ
+=======
+	// ä¿®æ”¹æ—¥æœŸ
+>>>>>>> 727b0bf041fc595c586b848ee91a682e752205d0
 	cout << "Current date: " << selectedRecord->getdate() << endl;
 	cout << "Modify date? (1=Yes, 0=No): ";
 	int modifyDate = getInput<int>(0, 1);
@@ -272,7 +280,7 @@ void record_manager::modifybydate(int y, int m, int d)
 		cout << "Date updated successfully." << endl;
 	}
 
-	// ĞŞ¸Ä¶Ô·½ĞÅÏ¢
+	// ä¿®æ”¹å¯¹æ–¹ä¿¡æ¯
 	cout << "Current To/From: " << selectedRecord->getwho() << endl;
 	cout << "Modify To/From? (1=Yes, 0=No): ";
 	int modifyWho = getInput<int>(0, 1);
@@ -283,7 +291,7 @@ void record_manager::modifybydate(int y, int m, int d)
 		cout << "To/From updated successfully." << endl;
 	}
 
-	// ĞŞ¸ÄÀàĞÍ£¨ÊÕÈë»òÖ§³öµÄ¾ßÌåÀàĞÍ£©
+	// ä¿®æ”¹ç±»å‹ï¼ˆæ”¶å…¥æˆ–æ”¯å‡ºçš„å…·ä½“ç±»å‹ï¼‰
 	if (selectedRecord->isIncome()) {
 		income_record* incomeRec = dynamic_cast<income_record*>(selectedRecord);
 		cout << "Current income type: " << itypeToString(incomeRec->gettype()) << endl;
@@ -313,16 +321,22 @@ void record_manager::modifybydate(int y, int m, int d)
 	}
 
 	cout << "Record modified successfully!" << endl;
-	savetofile(); // ±£´æĞŞ¸Äµ½ÎÄ¼ş
+	savetofile(); // ä¿å­˜ä¿®æ”¹åˆ°æ–‡ä»¶
 }
 
 void record_manager::deletebydate(int y, int m, int d)
 {
 	sort_records();
 	vector<record*> recordsToDelete;
+<<<<<<< HEAD
 	vector<int> indices;
 
 	// ²éÕÒÆ¥ÅäµÄ¼ÇÂ¼
+=======
+	vector<int> indices; // ä¿å­˜åŸå§‹ç´¢å¼•
+
+	// æŸ¥æ‰¾åŒ¹é…çš„è®°å½•å¹¶è®°å½•åŸå§‹ç´¢å¼•
+>>>>>>> 727b0bf041fc595c586b848ee91a682e752205d0
 	for (int i = 0; i < getsize(); i++) {
 		if (records[i]->getdate().getyear() == y &&
 			records[i]->getdate().getmonth() == m &&
@@ -337,7 +351,7 @@ void record_manager::deletebydate(int y, int m, int d)
 		return;
 	}
 
-	// ÏÔÊ¾ÕÒµ½µÄ¼ÇÂ¼
+	// æ˜¾ç¤ºæ‰¾åˆ°çš„è®°å½•
 	cout << "Found " << recordsToDelete.size() << " records for date " << y << "/" << m << "/" << d << ":" << endl;
 	cout << setw(12) << "type"
 		<< setw(13) << "money"
@@ -351,7 +365,7 @@ void record_manager::deletebydate(int y, int m, int d)
 		recordsToDelete[i]->showrecord();
 	}
 
-	// Ñ¡ÔñÉ¾³ı·½Ê½
+	// é€‰æ‹©åˆ é™¤æ–¹å¼
 	cout << "\nEnter record number to delete (1-" << recordsToDelete.size() << ")" << endl;
 	cout << "Or enter -1 to delete ALL records for this date" << endl;
 	cout << "Or enter 0 to cancel: ";
@@ -365,6 +379,7 @@ void record_manager::deletebydate(int y, int m, int d)
 
 	//  Í³Ò»È·ÈÏÉ¾³ı
 	if (choice == -1) {
+<<<<<<< HEAD
 		cout << "\n You are about to delete ALL " << recordsToDelete.size()
 			<< " records on " << y << "/" << m << "/" << d << "." << endl;
 		cout << "This action cannot be undone. Confirm? (1=Yes, 0=No): ";
@@ -375,6 +390,9 @@ void record_manager::deletebydate(int y, int m, int d)
 		}
 
 		// ´ÓºóÍùÇ°É¾³ı£¨±ÜÃâË÷Òı´íÂÒ£©
+=======
+		// åˆ é™¤è¯¥æ—¥æœŸçš„æ‰€æœ‰è®°å½•ï¼ˆä»åå¾€å‰åˆ é™¤é¿å…ç´¢å¼•å˜åŒ–ï¼‰
+>>>>>>> 727b0bf041fc595c586b848ee91a682e752205d0
 		for (int i = indices.size() - 1; i >= 0; i--) {
 			delete records[indices[i]];
 			records.erase(records.begin() + indices[i]);
@@ -382,6 +400,7 @@ void record_manager::deletebydate(int y, int m, int d)
 		cout << "All " << recordsToDelete.size() << " records deleted successfully!" << endl;
 	}
 	else {
+<<<<<<< HEAD
 		record* selected = recordsToDelete[choice - 1];
 		cout << "\n You are about to delete the following record:" << endl;
 		cout << setw(4) << 1;
@@ -394,13 +413,16 @@ void record_manager::deletebydate(int y, int m, int d)
 		}
 
 		// É¾³ıµ¥Ìõ
+=======
+		// åˆ é™¤å•ä¸ªè®°å½•
+>>>>>>> 727b0bf041fc595c586b848ee91a682e752205d0
 		int selectedIndex = indices[choice - 1];
 		delete records[selectedIndex];
 		records.erase(records.begin() + selectedIndex);
 		cout << "Record deleted successfully!" << endl;
 	}
 
-	savetofile(); // ±£´æµ½ÎÄ¼ş
+	savetofile(); // ä¿å­˜åˆ°æ–‡ä»¶
 }
 
 void record_manager::checkbalance()
@@ -460,21 +482,26 @@ void record_manager::statisticsbyCategory(date dt1, date dt2)
 		}
 	}
 
+<<<<<<< HEAD
 	// ¼ÆËã×ÜÊÕÈëºÍ×ÜÖ§³ö
 	double totalIncome = 0, totalSpend = 0;
+=======
+	// è®¡ç®—æ€»æ”¶å…¥å’Œæ€»æ”¯å‡º
+	float totalIncome = 0, totalSpend = 0;
+>>>>>>> 727b0bf041fc595c586b848ee91a682e752205d0
 	for (int i = 0; i < 6; i++) totalIncome += incomeAmount[i];
 	for (int i = 0; i < 11; i++) totalSpend += spendAmount[i];
 
 	std::cout << "\n--- Income Statistics ---\n";
 	if (totalIncome > 0) {
-		// ±íÍ·
+		// è¡¨å¤´
 		std::cout << std::setw(16) << "Category"
-			<< std::setw(16) << "Amount(£¤)"
+			<< std::setw(16) << "Amount(ï¿¥)"
 			<< std::setw(8) << "Times"
 			<< std::setw(14) << "Percent(%)"
-			<< std::setw(14) << "Avg(£¤)"
+			<< std::setw(14) << "Avg(ï¿¥)"
 			<< std::endl;
-		std::cout << std::string(68, '-') << std::endl; // ·Ö¸ôÏß
+		std::cout << std::string(68, '-') << std::endl; // åˆ†éš”çº¿
 	}
 
 	bool hasIncome = false;
@@ -500,14 +527,14 @@ void record_manager::statisticsbyCategory(date dt1, date dt2)
 
 	std::cout << "\n--- Spend Statistics ---\n";
 	if (totalSpend > 0) {
-		// ±íÍ·
+		// è¡¨å¤´
 		std::cout << std::setw(16) << "Category"
-			<< std::setw(16) << "Amount(£¤)"
+			<< std::setw(16) << "Amount(ï¿¥)"
 			<< std::setw(8) << "Times"
 			<< std::setw(14) << "Percent(%)"
-			<< std::setw(14) << "Avg(£¤)"
+			<< std::setw(14) << "Avg(ï¿¥)"
 			<< std::endl;
-		std::cout << std::string(68, '-') << std::endl; // ·Ö¸ôÏß
+		std::cout << std::string(68, '-') << std::endl; // åˆ†éš”çº¿
 	}
 
 	bool hasSpend = false;
@@ -549,12 +576,12 @@ void record_manager::balancewarning()
 	}
 	double netincome = totalincome - totalspend;
 	if(netincome<0)
-		cout << "Warning: You are overspending! (Net: " << netincome << "£¤)" << endl;
+		cout << "Warning: You are overspending! (Net: " << netincome << "ï¿¥)" << endl;
 	if (netincome >= target) {
-		cout << "Congratulations! You've reached your financial goal: " << target << "£¤!" << endl;
+		cout << "Congratulations! You've reached your financial goal: " << target << "ï¿¥!" << endl;
 	}
 	else {
-		cout << "Goal: " << target << "£¤, Need: " << (target - netincome) << "£¤ more." << endl;
+		cout << "Goal: " << target << "ï¿¥, Need: " << (target - netincome) << "ï¿¥ more." << endl;
 	}
 }
 

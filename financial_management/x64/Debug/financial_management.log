@@ -1,4 +1,11 @@
-﻿  recordmanager.cpp
+﻿  main.cpp
+  menu.cpp
+C:\Users\lenovo\source\repos\financial_management\financial_management\menu.cpp(209,39): warning C4305: “参数”: 从“double”到“T”截断
+C:\Users\lenovo\source\repos\financial_management\financial_management\menu.cpp(209,39): warning C4305:         with
+C:\Users\lenovo\source\repos\financial_management\financial_management\menu.cpp(209,39): warning C4305:         [
+C:\Users\lenovo\source\repos\financial_management\financial_management\menu.cpp(209,39): warning C4305:             T=float
+C:\Users\lenovo\source\repos\financial_management\financial_management\menu.cpp(209,39): warning C4305:         ]
+  recordmanager.cpp
 C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(240,52): warning C4267: “参数”: 从“size_t”转换到“T”，可能丢失数据
 C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(240,52): warning C4267:         with
 C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(240,52): warning C4267:         [
@@ -11,6 +18,9 @@ C:\Users\lenovo\source\repos\financial_management\financial_management\recordman
 C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(359,53): warning C4267:         ]
 C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(378,14): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
 C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(537,21): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(568,11): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
   recordmanager.h
   正在生成代码...
+  LINK : 没有找到 C:\Users\lenovo\source\repos\financial_management\x64\Debug\financial_management.exe 或上一个增量链接没有生成它；正在执行完全链接
+x64\Debug\recordmanager.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
   financial_management.vcxproj -> C:\Users\lenovo\source\repos\financial_management\x64\Debug\financial_management.exe
