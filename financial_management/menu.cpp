@@ -172,7 +172,6 @@ void menu(int choice, record_manager& manager) {
             cout << "Modify Record by Date" << endl;
             date targetDate = inputdate();
             manager.modifybydate(targetDate.getyear(), targetDate.getmonth(), targetDate.getday());
-            manager.balancewarning();
             break;
         }
 

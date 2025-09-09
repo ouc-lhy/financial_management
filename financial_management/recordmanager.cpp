@@ -5,7 +5,6 @@
 #include <limits>
 #include "income_record.h"
 #include "spend_record.h"
-#pragma once
 using namespace std;
 
 template<class T>
@@ -18,6 +17,7 @@ string inputwho();
 void record_manager::addrecord(record* rd)
 {
 	records.push_back(rd);
+	cout << "Record added successfully!" << endl;
 }
 
 void record_manager::showallrecords()
@@ -50,9 +50,9 @@ void record_manager::loadfromfile() {
 	if (!(in >> target)) {
 		target = 10000;
 		in.clear();
+		in.ignore();
 		cerr << "Warning: Failed to read target. Using default: " << target << endl;
 	}
-	in.ignore(); 
 	int type;
 	while (in >> type) {
 		record* rd = nullptr;
@@ -69,7 +69,7 @@ void record_manager::loadfromfile() {
 		}
 
 		if (rd) {
-			addrecord(rd);
+			records.push_back(rd);
 		}
 	}
 	in.close();
@@ -313,6 +313,10 @@ void record_manager::modifybydate(int y, int m, int d)
 	}
 
 	cout << "Record modified successfully!" << endl;
+
+	if(modifyMoney == 1)balancewarning();
+
+	sort_records();
 	savetofile(); // 保存修改到文件
 }
 
@@ -400,6 +404,7 @@ void record_manager::deletebydate(int y, int m, int d)
 		cout << "Record deleted successfully!" << endl;
 	}
 
+	sort_records();
 	savetofile(); // 保存到文件
 }
 
@@ -549,12 +554,12 @@ void record_manager::balancewarning()
 	}
 	double netincome = totalincome - totalspend;
 	if(netincome<0)
-		cout << "Warning: You are overspending! (Net: " << netincome << "￥)" << endl;
-	if (netincome >= target) {
-		cout << "Congratulations! You've reached your financial goal: " << target << "￥!" << endl;
+		cout << "\nWarning: You are overspending! (Net: " << netincome << "￥)" << endl;
+	else if (netincome >= target) {
+		cout << "\nCongratulations! You've reached your financial goal: " << target << "￥!" << endl;
 	}
 	else {
-		cout << "Goal: " << target << "￥, Need: " << (target - netincome) << "￥ more." << endl;
+		cout << "\nGoal: " << target << "￥, Need: " << (target - netincome) << "￥ more." << endl;
 	}
 }
 
