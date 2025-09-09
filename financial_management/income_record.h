@@ -13,7 +13,7 @@ class income_record:public record{
 		income_category itype;
 	public:
 		income_record();
-		income_record(date dt, float money, income_category itype,string sb);
+		income_record(date dt, double money, income_category itype,string sb);
 		~income_record();
 		income_category gettype();
 		void settype(income_category type);

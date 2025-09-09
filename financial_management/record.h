@@ -9,16 +9,16 @@ using namespace std;
 class record{
 	protected:
 		date dt;
-		float money;
+		double money;
 		string who;
 	public:
 		record();
-		record(date dt,float m,string sb);
+		record(date dt,double m,string sb);
 		virtual ~record();
 		date getdate();
 		void setdate(date dt1);
-		float getmoney();
-		void setmoney(float m);
+		double getmoney();
+		void setmoney(double m);
 		string getwho();
 		void setwho(string sb);
 

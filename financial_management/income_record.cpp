@@ -28,7 +28,7 @@ string itypeToString(income_category itype)
 income_record::income_record() {
 	itype = salary;
 }
-income_record::income_record(date dt, float money, income_category itype, string sb) :record(dt, money, sb), itype(itype) {
+income_record::income_record(date dt, double money, income_category itype, string sb) :record(dt, money, sb), itype(itype) {
 }
 
 income_record::~income_record() {}

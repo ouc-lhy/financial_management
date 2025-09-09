@@ -8,7 +8,7 @@ record::record()
 	who= "xng";
 }
 
-record::record(date dt,float m,string sb):dt(dt),money(m),who(sb){
+record::record(date dt,double m,string sb):dt(dt),money(m),who(sb){
 }
 
 record::~record() {
@@ -22,11 +22,11 @@ void record::setdate(date dt1){
 	dt=dt1;
 }
 
-float record::getmoney() {
+double record::getmoney() {
 	return money;
 }
 
-void record::setmoney(float m) {
+void record::setmoney(double m) {
 	money=m;
 }
 

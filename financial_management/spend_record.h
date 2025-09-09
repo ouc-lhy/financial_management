@@ -13,7 +13,7 @@ private:
     spend_category otype;
 public:
     spend_record();
-    spend_record(date dt, float money,string sb, spend_category otype);
+    spend_record(date dt, double money,string sb, spend_category otype);
     ~spend_record();
     spend_category gettype();
     void settype(spend_category type);

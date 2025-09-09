@@ -36,7 +36,7 @@ spend_record::spend_record() {
 	otype = food;
 }
 
-spend_record::spend_record(date dt, float money, string sb, spend_category otype) :record(dt, money, sb), otype(otype) {
+spend_record::spend_record(date dt, double money, string sb, spend_category otype) :record(dt, money, sb), otype(otype) {
 }
 
 spend_record::~spend_record() {}

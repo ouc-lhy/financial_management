@@ -251,7 +251,7 @@ void record_manager::modifybydate(int y, int m, int d)
 	// 修改金额
 	cout << "Current money: " << selectedRecord->getmoney() << endl;
 	cout << "Enter new money (0 to keep current): ";
-	float newMoney = getInput<float>(0);
+	double newMoney = getInput<double>(0.01,99999999.99);
 	if (newMoney > 0.01) {
 		selectedRecord->setmoney(newMoney);
 	}
@@ -374,15 +374,15 @@ void record_manager::deletebydate(int y, int m, int d)
 
 void record_manager::checkbalance()
 {
-	float totalincome = 0;
-	float totalspend = 0;
+	double totalincome = 0;
+	double totalspend = 0;
 	for (int i = 0; i < getsize(); i++) {
 		if (records[i]->isIncome())
 			totalincome += records[i]->getmoney();
 		else
 			totalspend += records[i]->getmoney();
 	}
-	float netincome = totalincome - totalspend;
+	double netincome = totalincome - totalspend;
 	cout << "total income:" << totalincome << endl;
 	cout << "total spend:" << totalspend << endl;
 	cout << "net balance:" << (netincome >= 0 ? "+" : "") << netincome << endl;
@@ -392,10 +392,10 @@ void record_manager::checkbalance()
 
 void record_manager::statisticsbyCategory(date dt1, date dt2)
 {
-	float incomeAmount[6] = { 0 };
+	double incomeAmount[6] = { 0 };
 	int incomeCount[6] = { 0 };
 
-	float spendAmount[11] = { 0 };
+	double spendAmount[11] = { 0 };
 	int spendCount[11] = { 0 };
 
 	for (int i = 0; i < getsize(); i++) {
@@ -430,7 +430,7 @@ void record_manager::statisticsbyCategory(date dt1, date dt2)
 	}
 
 	// 计算总收入和总支出
-	float totalIncome = 0, totalSpend = 0;
+	double totalIncome = 0, totalSpend = 0;
 	for (int i = 0; i < 6; i++) totalIncome += incomeAmount[i];
 	for (int i = 0; i < 11; i++) totalSpend += spendAmount[i];
 
@@ -449,8 +449,8 @@ void record_manager::statisticsbyCategory(date dt1, date dt2)
 	bool hasIncome = false;
 	for (int i = 0; i < 6; i++) {
 		if (incomeAmount[i] > 0) {
-			float percentage = (totalIncome > 0) ? (incomeAmount[i] / totalIncome * 100.0f) : 0.0f;
-			float avgPerTransaction = (incomeCount[i] > 0) ? (incomeAmount[i] / incomeCount[i]) : 0.0f;
+			double percentage = (totalIncome > 0) ? (incomeAmount[i] / totalIncome * 100.0f) : 0.0f;
+			double avgPerTransaction = (incomeCount[i] > 0) ? (incomeAmount[i] / incomeCount[i]) : 0.0f;
 			std::cout << std::setw(16) << itypeToString((income_category)i)
 				<< std::fixed << std::setprecision(2)
 				<< std::setw(16) << incomeAmount[i]
@@ -482,8 +482,8 @@ void record_manager::statisticsbyCategory(date dt1, date dt2)
 	bool hasSpend = false;
 	for (int i = 0; i < 11; i++) {
 		if (spendAmount[i] > 0) {
-			float percentage = (totalSpend > 0) ? (spendAmount[i] / totalSpend * 100.0f) : 0.0f;
-			float avgPerTransaction = (spendCount[i] > 0) ? (spendAmount[i] / spendCount[i]) : 0.0f;
+			double percentage = (totalSpend > 0) ? (spendAmount[i] / totalSpend * 100.0f) : 0.0f;
+			double avgPerTransaction = (spendCount[i] > 0) ? (spendAmount[i] / spendCount[i]) : 0.0f;
 			std::cout << std::setw(16) << otypeToString((spend_category)i)
 				<< std::fixed << std::setprecision(2)
 				<< std::setw(16) << spendAmount[i]
@@ -508,15 +508,15 @@ int record_manager::getsize()
 
 void record_manager::balancewarning()
 {
-	float totalincome = 0;
-	float totalspend = 0;
+	double totalincome = 0;
+	double totalspend = 0;
 	for (int i = 0; i < getsize(); i++) {
 		if (records[i]->isIncome())
 			totalincome += records[i]->getmoney();
 		else
 			totalspend += records[i]->getmoney();
 	}
-	float netincome = totalincome - totalspend;
+	double netincome = totalincome - totalspend;
 	if(netincome<0)
 		cout << "Warning: You are overspending! (Net: " << netincome << "￥)" << endl;
 	if (netincome >= target) {
