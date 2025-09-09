@@ -11,7 +11,7 @@ class record_manager {
 private:
     vector<record*> records;
     int sorttype;
-    int target;
+    double target;
 public:
     
     void addrecord(record* rd);
