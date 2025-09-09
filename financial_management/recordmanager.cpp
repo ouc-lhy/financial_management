@@ -250,11 +250,15 @@ void record_manager::modifybydate(int y, int m, int d)
 
 	// 修改金额
 	cout << "Current money: " << selectedRecord->getmoney() << endl;
-	cout << "Enter new money (0 to keep current): ";
-	double newMoney = getInput<double>(0.01,99999999.99);
-	if (newMoney > 0.01) {
+	cout << "Modify money? (1=Yes, 0=No): ";
+	int modifyMoney = getInput<int>(0, 1);
+	if (modifyMoney == 1) {
+		cout << "Enter new money: ";
+		float newMoney = getInput<double>(0.01, 99999999.99);
 		selectedRecord->setmoney(newMoney);
+		cout << "Money updated successfully." << endl;
 	}
+
 
 	// 修改日期
 	cout << "Current date: " << selectedRecord->getdate() << endl;
