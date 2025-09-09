@@ -105,7 +105,7 @@ void menu(int choice, record_manager& manager) {
     switch (choice) {
         case 1: {
             cout << "please enter money: ";
-            float money = getInput<float>(0.01);
+            double money = getInput<double>(0.01,99999999.99);
             date dt = inputdate();
             
             cout << "please enter type:\nsalary=0,business=1,investment=2,interest=3,allowance=4,otherincome=5" << endl;
@@ -125,7 +125,7 @@ void menu(int choice, record_manager& manager) {
 
         case 2: {
             cout << "please enter money: ";
-            float money = getInput<float>(0.01);
+            double money = getInput<double>(0.01,99999999.99);
             date dt = inputdate();
             
             cout << "please enter type:\nhousing=0,food=1,transport=2,insurance=3,healthcare=4,clothes=5,education=6,entertain=7,pet=8,travel=9,otherspend=10" << endl;
