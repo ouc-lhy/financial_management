@@ -34,7 +34,7 @@ string record::getwho() {
 	return who;
 }
 
-void record::setwho(string sb) {
+void record::setwho(string sb){
 	who = sb;
 }
 

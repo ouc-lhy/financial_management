@@ -28,6 +28,7 @@ int main() {
         }
 
     } while (choice != 0);
+
     manager.savetofile();
     return 0;
 }

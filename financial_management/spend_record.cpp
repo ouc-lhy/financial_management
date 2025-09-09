@@ -29,6 +29,7 @@ string otypeToString(spend_category otype) {
 	case travel:            return "travel";
 	case otherspend:        return "otherspend";
 	default:                return "unknown";
+
 	}
 }
 

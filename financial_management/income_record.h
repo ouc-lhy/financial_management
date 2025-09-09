@@ -23,4 +23,5 @@ class income_record:public record{
 		void save(ofstream& out);
 		virtual bool isIncome() const; 
 		virtual bool isSpend() const;
+
 };

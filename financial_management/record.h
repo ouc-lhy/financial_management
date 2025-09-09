@@ -26,5 +26,6 @@ class record{
 		virtual void save(ofstream& out)= 0;
 		virtual bool isIncome() const = 0;
 		virtual bool isSpend() const = 0;
+
 };
 

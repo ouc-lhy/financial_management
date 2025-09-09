@@ -23,4 +23,5 @@ public:
     void save(ofstream& out);
     bool isIncome() const;
     bool isSpend() const;
+
 };

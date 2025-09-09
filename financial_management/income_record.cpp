@@ -22,6 +22,7 @@ string itypeToString(income_category itype)
 	case allowance:       return "allowance";
 	case otherincome:		return "others";
 	default:              return "unknown";
+
 	}
 }
 

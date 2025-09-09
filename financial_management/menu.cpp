@@ -74,7 +74,7 @@ string inputwho() {
         getline(cin, who);
         // 去除首尾空白字符后检查是否为空
         if (who.find_first_not_of(" \t\n\r") != string::npos) {
-            return who; // 返回有效的名称
+            return who; 
         }
         cout << "Name cannot be empty! Please enter again: ";
     }
@@ -180,7 +180,6 @@ void menu(int choice, record_manager& manager) {
             date dt = inputdate();
             manager.deletebydate(dt.getyear(), dt.getmonth(), dt.getday());
             manager.balancewarning();
-            manager.savetofile(); 
             break;
         }
 
@@ -206,10 +205,9 @@ void menu(int choice, record_manager& manager) {
             cout << "please enter the expect target you want to set" << endl;
             cout << "expect target:";
             double newtarget;
-            newtarget=getInput<float>(0.01);
+            newtarget=getInput<double>(0.01);
             manager.settarget(newtarget);
             manager.balancewarning();
-            manager.savetofile();
             break;
         }
         case 0: {

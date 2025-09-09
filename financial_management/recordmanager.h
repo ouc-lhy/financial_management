@@ -12,6 +12,7 @@ private:
     vector<record*> records;
     int sorttype;
     double target;
+
 public:
     
     void addrecord(record* rd);

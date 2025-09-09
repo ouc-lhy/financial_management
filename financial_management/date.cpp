@@ -100,4 +100,5 @@ bool date::isvalid() const {
 	}
 
 	return true;
+
 }
