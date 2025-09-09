@@ -566,6 +566,7 @@ double record_manager::gettarget()
 void record_manager::settarget(double et)
 {
 	target = et;
+	savetofile();
 }
 
 
