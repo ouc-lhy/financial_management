@@ -205,8 +205,8 @@ void menu(int choice, record_manager& manager) {
         case 12: {
             cout << "please enter the expect target you want to set" << endl;
             cout << "expect target:";
-            int newtarget;
-            newtarget=getInput<int>(0);
+            double newtarget;
+            newtarget=getInput<float>(0.01);
             manager.settarget(newtarget);
             manager.balancewarning();
             manager.savetofile();

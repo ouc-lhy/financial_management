@@ -49,6 +49,7 @@ void record_manager::loadfromfile() {
 	}
 	if (!(in >> target)) {
 		target = 10000;
+		in.clear();
 		cerr << "Warning: Failed to read target. Using default: " << target << endl;
 	}
 	in.ignore(); 
@@ -254,7 +255,7 @@ void record_manager::modifybydate(int y, int m, int d)
 	int modifyMoney = getInput<int>(0, 1);
 	if (modifyMoney == 1) {
 		cout << "Enter new money: ";
-		float newMoney = getInput<double>(0.01, 99999999.99);
+		double newMoney = getInput<double>(0.01, 99999999.99);
 		selectedRecord->setmoney(newMoney);
 		cout << "Money updated successfully." << endl;
 	}
@@ -286,22 +287,28 @@ void record_manager::modifybydate(int y, int m, int d)
 	if (selectedRecord->isIncome()) {
 		income_record* incomeRec = dynamic_cast<income_record*>(selectedRecord);
 		cout << "Current income type: " << itypeToString(incomeRec->gettype()) << endl;
-		cout << "Enter new income type (0-5, -1 to keep current):\n"
-			<< "salary=0,business=1,investment=2,interest=3,allowance=4,otherincome=5" << endl;
-		int newType = getInput<int>(-1, 5);
-		if (newType != -1) {
+		cout << "Modify income type? (1=Yes, 0=No): ";
+		int modifyType = getInput<int>(0, 1);
+		if (modifyType == 1) {
+			cout << "Enter new income type (0-5):\n"
+				<< "salary=0, business=1, investment=2, interest=3, allowance=4, otherincome=5: ";
+			int newType = getInput<int>(0, 5);
 			incomeRec->settype(static_cast<income_category>(newType));
+			cout << "Income type updated successfully." << endl;
 		}
 	}
 	else {
 		spend_record* spendRec = dynamic_cast<spend_record*>(selectedRecord);
 		cout << "Current spend type: " << otypeToString(spendRec->gettype()) << endl;
-		cout << "Enter new spend type (0-10, -1 to keep current):\n"
-			<< "housing=0,food=1,transport=2,insurance=3,healthcare=4,clothes=5,"
-			<< "education=6,entertain=7,pet=8,travel=9,otherspend=10" << endl;
-		int newType = getInput<int>(-1, 10);
-		if (newType != -1) {
+		cout << "Modify spend type? (1=Yes, 0=No): ";
+		int modifyType = getInput<int>(0, 1);
+		if (modifyType == 1) {
+			cout << "Enter new spend type (0-10):\n"
+				<< "housing=0, food=1, transport=2, insurance=3, healthcare=4,\n"
+				<< "clothes=5, education=6, entertain=7, pet=8, travel=9, otherspend=10:\n";
+			int newType = getInput<int>(0, 10);
 			spendRec->settype(static_cast<spend_category>(newType));
+			cout << "Spend type updated successfully." << endl;
 		}
 	}
 
@@ -313,9 +320,9 @@ void record_manager::deletebydate(int y, int m, int d)
 {
 	sort_records();
 	vector<record*> recordsToDelete;
-	vector<int> indices; // 保存原始索引
+	vector<int> indices;
 
-	// 查找匹配的记录并记录原始索引
+	// 查找匹配的记录
 	for (int i = 0; i < getsize(); i++) {
 		if (records[i]->getdate().getyear() == y &&
 			records[i]->getdate().getmonth() == m &&
@@ -356,8 +363,18 @@ void record_manager::deletebydate(int y, int m, int d)
 		return;
 	}
 
+	//  统一确认删除
 	if (choice == -1) {
-		// 删除该日期的所有记录（从后往前删除避免索引变化）
+		cout << "\n You are about to delete ALL " << recordsToDelete.size()
+			<< " records on " << y << "/" << m << "/" << d << "." << endl;
+		cout << "This action cannot be undone. Confirm? (1=Yes, 0=No): ";
+		int confirm = getInput<int>(0, 1);
+		if (confirm != 1) {
+			cout << "Deletion cancelled." << endl;
+			return;
+		}
+
+		// 从后往前删除（避免索引错乱）
 		for (int i = indices.size() - 1; i >= 0; i--) {
 			delete records[indices[i]];
 			records.erase(records.begin() + indices[i]);
@@ -365,7 +382,18 @@ void record_manager::deletebydate(int y, int m, int d)
 		cout << "All " << recordsToDelete.size() << " records deleted successfully!" << endl;
 	}
 	else {
-		// 删除单个记录
+		record* selected = recordsToDelete[choice - 1];
+		cout << "\n You are about to delete the following record:" << endl;
+		cout << setw(4) << 1;
+		selected->showrecord();
+		cout << "This action cannot be undone. Confirm? (1=Yes, 0=No): ";
+		int confirm = getInput<int>(0, 1);
+		if (confirm != 1) {
+			cout << "Deletion cancelled." << endl;
+			return;
+		}
+
+		// 删除单条
 		int selectedIndex = indices[choice - 1];
 		delete records[selectedIndex];
 		records.erase(records.begin() + selectedIndex);
@@ -374,7 +402,6 @@ void record_manager::deletebydate(int y, int m, int d)
 
 	savetofile(); // 保存到文件
 }
-
 
 void record_manager::checkbalance()
 {
@@ -531,12 +558,12 @@ void record_manager::balancewarning()
 	}
 }
 
-int record_manager::gettarget()
+double record_manager::gettarget()
 {
 	return target;
 }
 
-void record_manager::settarget(int et)
+void record_manager::settarget(double et)
 {
 	target = et;
 }
@@ -595,7 +622,6 @@ void record_manager::sort_records() {
 }
 
 record_manager::~record_manager() {
-	savetofile();
 	for (int i = 0; i < getsize(); i++) {
 		delete records[i];
 	}
