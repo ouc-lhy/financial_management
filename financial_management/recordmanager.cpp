@@ -14,6 +14,17 @@ date inputdate();
 
 string inputwho();
 
+string record_manager::sortTypeToString() const {
+	switch (sorttype) {
+	case 1: return "Money Ascending";
+	case 2: return "Money Descending";
+	case 3: return "Type Order";
+	case 4: return "Date Ascending";
+	case 5: return "Date Descending";
+	default: return "Default: Date Ascending";
+	}
+}
+
 void record_manager::addrecord(record* rd)
 {
 	records.push_back(rd);
@@ -53,6 +64,14 @@ void record_manager::loadfromfile() {
 		in.ignore();
 		cerr << "Warning: Failed to read target. Using default: " << target << endl;
 	}
+
+	if (!(in >> sorttype)) {
+		sorttype = 4; 
+		in.clear();
+		in.ignore();
+		cerr << "Warning: Failed to read sorttype. Using default: " << sorttype << endl;
+	}
+
 	int type;
 	while (in >> type) {
 		record* rd = nullptr;
@@ -74,12 +93,16 @@ void record_manager::loadfromfile() {
 	}
 	in.close();
 	cout << "totally load " << records.size() << " records" << endl;
+	cout << "target:" << fixed << setprecision(2)<<target << endl;
+	cout << "sort type:" << sortTypeToString() << endl;
 }
 
 void record_manager::savetofile()
 {
+	sort_records();
 	ofstream out(filename);
-	out << target << endl;
+	out << fixed << setprecision(2)<<target << endl;
+	out << sorttype << endl;
 	for (int i = 0; i < getsize(); i++) {
 		records[i]->save(out);
 	}
@@ -577,13 +600,10 @@ void record_manager::settarget(double et)
 
 int record_manager::get_sorttype() const { return sorttype; }
 
-void record_manager::set_sorttype(int st) { sorttype = st; }
-
-record_manager::record_manager() :sorttype(0),target(10000)
-{
-	loadfromfile();
+void record_manager::set_sorttype(int st) {
+	sorttype = st;
+	savetofile();
 }
-
 
 bool compare_by_date_asc(record* a, record* b) {
 	return a->getdate() < b->getdate();
@@ -626,6 +646,12 @@ void record_manager::sort_records() {
 	default: sort(records.begin(), records.end(), compare_by_date_asc);
 	}
 }
+
+record_manager::record_manager() :sorttype(4), target(10000)
+{
+	loadfromfile();
+}
+
 
 record_manager::~record_manager() {
 	for (int i = 0; i < getsize(); i++) {

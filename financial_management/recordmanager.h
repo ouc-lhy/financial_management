@@ -32,6 +32,7 @@ public:
     void settarget(double et);
     int get_sorttype() const;
     void set_sorttype(int st);
+    string sortTypeToString() const;
     void sort_records();
     record_manager();
     ~record_manager();

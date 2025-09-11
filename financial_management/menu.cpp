@@ -93,9 +93,9 @@ void showmenu() {
     cout << "7 - Modify Records by Date" << endl;
     cout << "8 - Delete Records by Date" << endl;
     cout << "9 - Statistics by Category within Date Range" << endl;
-    cout << "10 - showallrecords" << endl;
-    cout << "11 - set sort type" << endl;
-    cout << "12 - set expect target" << endl;
+    cout << "10 - Showallrecords" << endl;
+    cout << "11 - Set sort type" << endl;
+    cout << "12 - Set expect target" << endl;
     cout << "0 - Exit System" << endl;
     cout << "================================================" << endl;
     cout << "Please select operation (0-12): ";
@@ -195,7 +195,8 @@ void menu(int choice, record_manager& manager) {
         }
 
         case 11: {
-            cout << "please enter sort type: \n" << "money_ascend = 1, money_descend = 2, type_ascend = 3, date_ascend = 4, date_descend = 5" << endl;
+            cout << "\ncurrent sort type:" << manager.sortTypeToString()<<endl<<endl;
+            cout << "please enter new sort type: \n" << "money_ascend = 1, money_descend = 2, type_ascend = 3, date_ascend = 4, date_descend = 5" << endl;
             int sorttype = getInput<int>(1, 5);
             manager.set_sorttype(sorttype);
             break;
