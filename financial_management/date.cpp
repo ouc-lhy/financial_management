@@ -1,5 +1,6 @@
 #pragma once
-#include"date.h"
+#include "date.h"
+#include <ctime>
 using namespace std;
 date::date() :year(2000), month(1), day(1) {
 }
