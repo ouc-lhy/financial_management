@@ -99,6 +99,23 @@ bool date::isvalid() const {
 		return false;
 	}
 
+	// 获取当前日期 - 使用localtime_s
+	time_t now = time(0);
+	struct tm current_time_struct = {};
+	errno_t err = localtime_s(&current_time_struct, &now);
+	if (err != 0) {
+		cerr << "fail to get current date"<<endl;
+		return false;
+	}
+	date current_date(current_time_struct.tm_year + 1900,
+		current_time_struct.tm_mon + 1,
+		current_time_struct.tm_mday);
+
+	// 使用已定义的比较运算符检查是否晚于当前日期
+	if (*this > current_date) {
+		return false;
+	}
+	
 	return true;
 
 }

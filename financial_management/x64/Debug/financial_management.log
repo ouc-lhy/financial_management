@@ -1,14 +1,2 @@
-﻿  recordmanager.cpp
-C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(263,52): warning C4267: “参数”: 从“size_t”转换到“T”，可能丢失数据
-C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(263,52): warning C4267:         with
-C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(263,52): warning C4267:         [
-C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(263,52): warning C4267:             T=int
-C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(263,52): warning C4267:         ]
-C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(386,53): warning C4267: “参数”: 从“size_t”转换到“T”，可能丢失数据
-C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(386,53): warning C4267:         with
-C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(386,53): warning C4267:         [
-C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(386,53): warning C4267:             T=int
-C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(386,53): warning C4267:         ]
-C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(405,14): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\lenovo\source\repos\financial_management\financial_management\recordmanager.cpp(565,21): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+﻿  date.cpp
   financial_management.vcxproj -> C:\Users\lenovo\source\repos\financial_management\x64\Debug\financial_management.exe

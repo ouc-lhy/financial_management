@@ -28,6 +28,7 @@ string record_manager::sortTypeToString() const {
 void record_manager::addrecord(record* rd)
 {
 	records.push_back(rd);
+	sort_records();
 	cout << "Record added successfully!" << endl;
 }
 
