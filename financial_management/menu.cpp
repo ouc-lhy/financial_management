@@ -72,7 +72,6 @@ string inputwho() {
     string who;
     while (true) {
         getline(cin, who);
-        // 去除首尾空白字符后检查是否为空
         if (who.find_first_not_of(" \t\n\r") != string::npos) {
             return who; 
         }

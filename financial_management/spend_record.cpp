@@ -58,7 +58,7 @@ ostream& operator<<(ostream& out, spend_record rd) {
 istream& operator>>(istream& in, spend_record& rd)
 {
 	in >> rd.money >> rd.dt >> rd.otype;
-	in >> ws;//ignore whitespace
+	in >> ws;
 	getline(in, rd.who);
 	return in;
 }

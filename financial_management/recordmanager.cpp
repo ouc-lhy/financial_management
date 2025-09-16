@@ -231,7 +231,6 @@ void record_manager::modifybydate(int y, int m, int d)
 	sort_records();
 	vector<record*> recordsToModify;
 
-	// 查找匹配的记录
 	for (int i = 0; i < getsize(); i++) {
 		if (records[i]->getdate().getyear() == y &&
 			records[i]->getdate().getmonth() == m &&
@@ -245,7 +244,6 @@ void record_manager::modifybydate(int y, int m, int d)
 		return;
 	}
 
-	// 显示找到的记录
 	cout << "Found " << recordsToModify.size() << " records for date " << y << "/" << m << "/" << d << ":" << endl;
 	cout << setw(12) << "type"
 		<< setw(13) << "money"
@@ -259,7 +257,6 @@ void record_manager::modifybydate(int y, int m, int d)
 		recordsToModify[i]->showrecord();
 	}
 
-	// 选择要修改的记录
 	cout << "Select record number to modify (0 to cancel): ";
 	int choice = getInput<int>(0, recordsToModify.size());
 
@@ -270,10 +267,8 @@ void record_manager::modifybydate(int y, int m, int d)
 
 	record* selectedRecord = recordsToModify[choice - 1];
 
-	// 修改记录信息
 	cout << "\n=== Modify Record ===" << endl;
 
-	// 修改金额
 	cout << "Current money: " << selectedRecord->getmoney() << endl;
 	cout << "Modify money? (1=Yes, 0=No): ";
 	int modifyMoney = getInput<int>(0, 1);
@@ -285,7 +280,6 @@ void record_manager::modifybydate(int y, int m, int d)
 	}
 
 
-	// 修改日期
 	cout << "Current date: " << selectedRecord->getdate() << endl;
 	cout << "Modify date? (1=Yes, 0=No): ";
 	int modifyDate = getInput<int>(0, 1);
@@ -296,7 +290,6 @@ void record_manager::modifybydate(int y, int m, int d)
 		cout << "Date updated successfully." << endl;
 	}
 
-	// 修改对方信息
 	cout << "Current To/From: " << selectedRecord->getwho() << endl;
 	cout << "Modify To/From? (1=Yes, 0=No): ";
 	int modifyWho = getInput<int>(0, 1);
@@ -307,7 +300,6 @@ void record_manager::modifybydate(int y, int m, int d)
 		cout << "To/From updated successfully." << endl;
 	}
 
-	// 修改类型（收入或支出的具体类型）
 	if (selectedRecord->isIncome()) {
 		income_record* incomeRec = dynamic_cast<income_record*>(selectedRecord);
 		cout << "Current income type: " << itypeToString(incomeRec->gettype()) << endl;
@@ -341,7 +333,7 @@ void record_manager::modifybydate(int y, int m, int d)
 	if(modifyMoney == 1)balancewarning();
 
 	sort_records();
-	savetofile(); // 保存修改到文件
+	savetofile(); 
 }
 
 void record_manager::deletebydate(int y, int m, int d)
@@ -350,7 +342,6 @@ void record_manager::deletebydate(int y, int m, int d)
 	vector<record*> recordsToDelete;
 	vector<int> indices;
 
-	// 查找匹配的记录
 	for (int i = 0; i < getsize(); i++) {
 		if (records[i]->getdate().getyear() == y &&
 			records[i]->getdate().getmonth() == m &&
@@ -365,7 +356,6 @@ void record_manager::deletebydate(int y, int m, int d)
 		return;
 	}
 
-	// 显示找到的记录
 	cout << "Found " << recordsToDelete.size() << " records for date " << y << "/" << m << "/" << d << ":" << endl;
 	cout << setw(12) << "type"
 		<< setw(13) << "money"
@@ -379,7 +369,6 @@ void record_manager::deletebydate(int y, int m, int d)
 		recordsToDelete[i]->showrecord();
 	}
 
-	// 选择删除方式
 	cout << "\nEnter record number to delete (1-" << recordsToDelete.size() << ")" << endl;
 	cout << "Or enter -1 to delete ALL records for this date" << endl;
 	cout << "Or enter 0 to cancel: ";
@@ -391,7 +380,6 @@ void record_manager::deletebydate(int y, int m, int d)
 		return;
 	}
 
-	//  统一确认删除
 	if (choice == -1) {
 		cout << "\n You are about to delete ALL " << recordsToDelete.size()
 			<< " records on " << y << "/" << m << "/" << d << "." << endl;
@@ -402,7 +390,6 @@ void record_manager::deletebydate(int y, int m, int d)
 			return;
 		}
 
-		// 从后往前删除（避免索引错乱）
 		for (int i = indices.size() - 1; i >= 0; i--) {
 			delete records[indices[i]];
 			records.erase(records.begin() + indices[i]);
@@ -421,7 +408,6 @@ void record_manager::deletebydate(int y, int m, int d)
 			return;
 		}
 
-		// 删除单条
 		int selectedIndex = indices[choice - 1];
 		delete records[selectedIndex];
 		records.erase(records.begin() + selectedIndex);
@@ -429,7 +415,7 @@ void record_manager::deletebydate(int y, int m, int d)
 	}
 
 	sort_records();
-	savetofile(); // 保存到文件
+	savetofile(); 
 }
 
 void record_manager::checkbalance()
@@ -489,21 +475,19 @@ void record_manager::statisticsbyCategory(date dt1, date dt2)
 		}
 	}
 
-	// 计算总收入和总支出
 	double totalIncome = 0, totalSpend = 0;
 	for (int i = 0; i < 6; i++) totalIncome += incomeAmount[i];
 	for (int i = 0; i < 11; i++) totalSpend += spendAmount[i];
 
 	std::cout << "\n--- Income Statistics ---\n";
 	if (totalIncome > 0) {
-		// 表头
 		std::cout << std::setw(16) << "Category"
 			<< std::setw(16) << "Amount(￥)"
 			<< std::setw(8) << "Times"
 			<< std::setw(14) << "Percent(%)"
 			<< std::setw(14) << "Avg(￥)"
 			<< std::endl;
-		std::cout << std::string(68, '-') << std::endl; // 分隔线
+		std::cout << std::string(68, '-') << std::endl; 
 	}
 
 	bool hasIncome = false;
@@ -529,14 +513,13 @@ void record_manager::statisticsbyCategory(date dt1, date dt2)
 
 	std::cout << "\n--- Spend Statistics ---\n";
 	if (totalSpend > 0) {
-		// 表头
 		std::cout << std::setw(16) << "Category"
 			<< std::setw(16) << "Amount(￥)"
 			<< std::setw(8) << "Times"
 			<< std::setw(14) << "Percent(%)"
 			<< std::setw(14) << "Avg(￥)"
 			<< std::endl;
-		std::cout << std::string(68, '-') << std::endl; // 分隔线
+		std::cout << std::string(68, '-') << std::endl;
 	}
 
 	bool hasSpend = false;

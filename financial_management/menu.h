@@ -7,18 +7,13 @@
 
 using namespace std;
 
-// 日期相关函数
 date inputdate();
 
 void inputdaterange(date& start, date& end);
 
-// 菜单显示函数
 void showmenu();
 
-// 菜单处理函数
 void menu(int choice, record_manager& manager);
-
-// 工具函数
 
 template<class T>
 T getInput(T minVal = -numeric_limits<T>::max(), T maxVal = numeric_limits<T>::max()) {

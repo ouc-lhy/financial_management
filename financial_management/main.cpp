@@ -21,7 +21,6 @@ int main() {
         
         if (choice != 0) {
             cout << "\n--- Press Enter to continue ---";
-            // 忽略所有字符，直到用户按下回车
             while (cin.get() != '\n') {
           
             }
