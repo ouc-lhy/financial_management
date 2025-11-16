@@ -1,0 +1,259 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lenovo\\source\\repos\\financial_management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\date.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\date.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\recordmanager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\recordmanager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\menu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\income_record.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\income_record.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\date.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\date.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\spend_record.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\spend_record.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\record.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\record.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\recordmanager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\recordmanager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\spend_record.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\spend_record.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\income_record.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\income_record.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\record.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{579DFCFC-7A49-46E7-A765-FC1AA8272BF9}|financial_management\\financial_management.vcxproj|solutionrelative:financial_management\\record.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Users\\lenovo\\Desktop\\cundang\\\u65B0\u5EFA\u6587\u4EF6\u5939 (14)101\\menu.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Users\\lenovo\\Desktop\\fengong\\lin\\recordmanager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "menu.h",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\menu.h",
+              "RelativeDocumentMoniker": "financial_management\\menu.h",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\menu.h",
+              "RelativeToolTip": "financial_management\\menu.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-28T03:14:33.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\main.cpp",
+              "RelativeDocumentMoniker": "financial_management\\main.cpp",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\main.cpp",
+              "RelativeToolTip": "financial_management\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-25T09:46:32.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "recordmanager.cpp",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\recordmanager.cpp",
+              "RelativeDocumentMoniker": "financial_management\\recordmanager.cpp",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\recordmanager.cpp",
+              "RelativeToolTip": "financial_management\\recordmanager.cpp",
+              "ViewState": "AgIAABwAAAAAAAAAAAAjwMsAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-25T11:59:58.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "recordmanager.h",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\recordmanager.h",
+              "RelativeDocumentMoniker": "financial_management\\recordmanager.h",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\recordmanager.h",
+              "RelativeToolTip": "financial_management\\recordmanager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-25T11:36:06.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "date.h",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\date.h",
+              "RelativeDocumentMoniker": "financial_management\\date.h",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\date.h",
+              "RelativeToolTip": "financial_management\\date.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-25T09:52:06.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "record.cpp",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\record.cpp",
+              "RelativeDocumentMoniker": "financial_management\\record.cpp",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\record.cpp",
+              "RelativeToolTip": "financial_management\\record.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-25T09:51:50.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "income_record.cpp",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\income_record.cpp",
+              "RelativeDocumentMoniker": "financial_management\\income_record.cpp",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\income_record.cpp",
+              "RelativeToolTip": "financial_management\\income_record.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-25T09:54:31.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "spend_record.cpp",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\spend_record.cpp",
+              "RelativeDocumentMoniker": "financial_management\\spend_record.cpp",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\spend_record.cpp",
+              "RelativeToolTip": "financial_management\\spend_record.cpp",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAjwEsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-25T09:45:32.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "date.cpp",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\date.cpp",
+              "RelativeDocumentMoniker": "financial_management\\date.cpp",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\date.cpp",
+              "RelativeToolTip": "financial_management\\date.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-25T10:15:53.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "menu.cpp",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\menu.cpp",
+              "RelativeDocumentMoniker": "financial_management\\menu.cpp",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\menu.cpp",
+              "RelativeToolTip": "financial_management\\menu.cpp",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAEoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-28T03:14:50.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "income_record.h",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\income_record.h",
+              "RelativeDocumentMoniker": "financial_management\\income_record.h",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\income_record.h",
+              "RelativeToolTip": "financial_management\\income_record.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-25T09:48:24.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "record.h",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\record.h",
+              "RelativeDocumentMoniker": "financial_management\\record.h",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\record.h",
+              "RelativeToolTip": "financial_management\\record.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-25T09:53:56.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "spend_record.h",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\spend_record.h",
+              "RelativeDocumentMoniker": "financial_management\\spend_record.h",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\financial_management\\financial_management\\spend_record.h",
+              "RelativeToolTip": "financial_management\\spend_record.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-25T09:53:52.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "recordmanager.h",
+              "DocumentMoniker": "E:\\Users\\lenovo\\Desktop\\fengong\\lin\\recordmanager.h",
+              "ToolTip": "E:\\Users\\lenovo\\Desktop\\fengong\\lin\\recordmanager.h",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-08-29T00:35:44.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "menu.h",
+              "DocumentMoniker": "E:\\Users\\lenovo\\Desktop\\cundang\\\u65B0\u5EFA\u6587\u4EF6\u5939 (14)101\\menu.h",
+              "ToolTip": "E:\\Users\\lenovo\\Desktop\\cundang\\\u65B0\u5EFA\u6587\u4EF6\u5939 (14)101\\menu.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-09T05:06:36.326Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
